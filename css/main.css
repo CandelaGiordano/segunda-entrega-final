@@ -1,0 +1,218 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*estilos generales*/
+
+html{
+    font-size: 10px;
+}
+.headerMenu{
+    background-color: #DB241D;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+/*estilos menu*/
+
+
+header h1{
+    font-size: 1.1rem;
+    font-weight: bolder; /*no esta modificando nada nose porque*/ 
+    padding: 0.2rem;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.headerMenu header h1 .subMenu{
+    display: none;
+}
+
+.headerMenu header h1:hover > .subMenu{
+    display: block;
+    font-size: 0.8rem;
+    list-style: none;
+}
+.headerMenu header h1 .subMenu li{
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+nav ul{
+    display: none;
+    
+}
+
+
+/*iconos. tamanios...*/
+.iconos{
+    display: flex;
+    
+    
+}
+
+.iconoIg{
+    width: 17%;
+    
+}
+
+.iconoMail{
+    width: 17%;
+    
+}
+
+.iconoWpp{
+    width: 17%; 
+    
+}
+
+
+
+/*Estilos de main*/
+
+.mainMFR{
+    background-image: url(../img/mujer\ compu.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%
+    
+}
+.mainMFR{
+    display: grid;
+    grid-template-columns: 0.5rem 1rem 0.5rem;
+    grid-template-rows: 3rem;
+    grid-template-areas: ''parrafo''
+                        ''logoMFR''
+                        ''iniciarSesion'';
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.mainMFR p{
+    grid-area: parrafo;
+    font-size: 0.7rem;
+    margin: 2rem;
+}
+
+.mainMFR div{
+    grid-area: logoMFR;
+    margin: 2rem;
+}
+
+.mainMFR div img{
+    width: 25%;
+}
+.mainMFR a{
+    grid-area: iniciarSesion;
+    margin: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 20rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 00.8rem;
+}
+
+footer{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+footer .iconos{
+    display: none;
+}
+
+
+/*estilos de metodo*/
+
+.mainMetodo{
+    grid-template-columns: 3rem;
+    grid-template-rows: 3rem;
+    grid-template-areas: 'parrafoUno parrafoUno' 
+                        'parrafoDos imgUno'
+                        'carrousel imgDos';
+}
+
+.mainMetodo .parrafoUno{
+    grid-area: parrafoUno;
+}
+
+.mainMetodo .parrafoDos{
+    grid-area: parrafoDos;
+}
+
+.mainMetodo img{
+    grid-area: imgUno;
+    width: 20%;
+}
+
+.mainMetodo .parrafoTres{
+    grid-area: parrafoTres;
+}
+
+.mainMetodo .imgDos{
+    width: 20%;
+    grid-area: imgDos;
+}
+.mainMetodo  div {
+    display: flex;
+    width: 60%;
+}
+
+footer{
+    background-color: #DB241D;
+}
+
+@media screen and (min-width: 1024px){
+    
+    html{
+        font-size: 16px;
+    }
+
+    .iconos{
+        display: none;
+    }
+
+    footer .iconos{
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    
+    nav ul li{
+        font-size: 0.7rem;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        list-style: none;
+        justify-content: flex-end;
+        justify-items: flex-end;
+        align-items: flex-end;
+    } 
+    .headerMenu header h1:hover > .subMenu{
+        display: none;
+    }
+    .headerMenu header h1:hover {
+        display: none;
+    }
+    .mainMFR{
+        justify-content: flex-start;
+    }
+
+    
+}
